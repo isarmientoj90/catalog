@@ -1,0 +1,62 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.iconoExcel{
+	
+	width: 80px;
+	height:80px;
+}
+
+.iconoDiccionario{
+	
+	width: 60px;
+	height:60px;
+	margin:10px 0px 0px 10px
+}
+
+
+.iconoServiceNow
+{	
+	width: 220px;
+	height:90px;
+}
+
+.h1{
+	margin:16px 0px 16px 0px;
+}
+
+.h2{
+	margin:8px 0px 8px 0px;
+}
+
+.body{
+	margin:10px 0px 50px 0px;
+	
+}
+
+.cursor{
+	cursor:pointer;
+}
+
+
+.sidebar{
+	
+	background-color:#092143;
+}
+
+.center{
+	text-align: center;
+}
+
+
+
+
+.colorZero{
+	
+	background-color:#092143 !important;
+	color: white !important;
+}
+

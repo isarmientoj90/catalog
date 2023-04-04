@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+	
+<h2 class="h2">Diccionario de datos</h2>
+
+<p>Deacuerdo a la base existente, se ha construido un diccionario de datos llamado:</p> <a href="https://tgestiona-my.sharepoint.com/:x:/g/personal/isarmientoj_valtx_pe/EUlZDTmrVMRInp-fHd82gz8BCwmMZcZtBatK4Nz1LWcE1A?e=UvdzKc">“Diccionario de datos - Incidencias BBVA”</a>, 
+
+
+<div>
+{% load static %}
+<img src="{% static 'images/diccionario.png' %}" alt="My image" class="iconoDiccionario cursor" onclick="window.open('https://tgestiona-my.sharepoint.com/:x:/g/personal/isarmientoj_valtx_pe/EUlZDTmrVMRInp-fHd82gz8BCwmMZcZtBatK4Nz1LWcE1A?e=UvdzKc')" >
+</div>  
+
+
+	
+	<iframe name="ifram" src="https://app.powerbi.com/view?r=eyJrIjoiY2IyMmEwNjktODUyMS00MzViLTg1MDEtYTQ2OTY4YWYzMzllIiwidCI6ImY5MDQyMThiLTRmOWMtNDZkMC05OGE4LTE4MGY5Yzk0ZGU4OCIsImMiOjR9" width="1000px" height="600px" frameborder="0"></iframe>
+	
+	
+ 
+{% endblock %}

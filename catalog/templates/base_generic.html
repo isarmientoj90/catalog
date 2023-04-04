@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  {% block title %}<title>Catalogo de datos</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="shortcut icon" href="{% static 'images/valtx.ico' %}" />
+  
+  {% load bootstrap5 %}
+  
+  <!-- Add additional CSS in static file --> 
+  
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+   
+{# Load the tag library #}
+{% load bootstrap5 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+ 
+{# Load icon #}
+{% load bootstrap_icons %}
+ 
+ 
+ 
+    <style>
+      body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+main {
+  height: 100vh;
+  height: -webkit-fill-available;
+  max-height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+ 
+
+.scrollarea {
+  overflow-y: auto;
+}
+    </style>
+ 
+ 
+</head>
+<body>
+  
+<main class="d-flex flex-nowrap">
+
+<div class="d-flex flex-column flex-shrink-0 bg-body-tertiary colorZero " style="width: 4.5rem;">
+
+	<img src="{% static 'images/Bbva_cortado.png' %}" alt="My image" class="" style="width: 4.5rem;" >
+    
+	
+    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+      <li class="nav-item">
+        <a href="{% url 'index' %}" class="nav-link  py-3  rounded-0" aria-current="page" title="Index" data-bs-toggle="tooltip" data-bs-placement="right">
+          {% bs_icon 'house-door' extra_classes="colorZero"%}
+        </a>
+      </li>
+	  {#% if user.is_authenticated %#} 
+      <li>
+        <a href="#" class="nav-link py-3  rounded-0" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right">
+		  {% bs_icon 'speedometer2' extra_classes="colorZero"%}	
+		  
+        </a>
+      </li>
+	  <li>
+        <a href="{% url 'dictionary' %}" class="nav-link py-3 rounded-0" title="Dictionary" data-bs-toggle="tooltip" data-bs-placement="right">
+          {% bs_icon 'table' extra_classes="colorZero"%}
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link py-3 rounded-0" title="Orders" data-bs-toggle="tooltip" data-bs-placement="right">
+          {% bs_icon 'table' extra_classes="colorZero"%}
+        </a>
+      </li>
+       {#% endif %#} 
+	   
+    </ul>
+	
+    <div class="dropdown col-sm-10  ">
+      <a href="#" class="d-flex align-items-center justify-content-center  link-body-emphasis text-decoration-none colorZero dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        {% bs_icon 'person' extra_classes="colorZero"%}	
+      </a>
+      <ul class="dropdown-menu text-small shadow">  
+		{% if user.is_authenticated %} 
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider"></li>
+		
+        <li><a class="dropdown-item" href="#">Sign out</a></li> 
+		{% else %}
+		<li><a class="dropdown-item" href="#">Sign in</a></li>
+		{% endif %} 		
+      </ul>
+    </div>
+	
+</div> 
+ 
+     
+	
+	
+	<div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-body-tertiary col-sm-10" style="margin-left: 9.5rem;">
+    <!-- <a href="/" class="d-flex align-items-center flex-shrink-0 p-3 link-body-emphasis text-decoration-none border-bottom"> -->
+      <!-- <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg> -->
+      <!-- <span class="fs-5 fw-semibold">List group</span> -->
+    <!-- </a> -->
+    <div class="list-group list-group-flush border-bottom scrollarea " style=""	>
+      			{% block content %}{% endblock %}
+	</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</main>
+	 
+</body>
+
+</html>
+
+<!-- Footer -->
+<!-- © 2023 GitHub, Inc. -->
+<!-- Footer navigation -->
+<!-- Terms -->
+<!-- Privacy -->
+<!-- Security -->
+<!-- Status -->
+<!-- Docs -->
+<!-- Contact GitHub -->
+<!-- Pricing -->
+<!-- API -->
+<!-- Training -->
+<!-- Blog -->
+<!-- About -->
+<!-- django-locallibrary-tutorial/base_generic.html at main · mdn/django-locallibrary-tutorial · GitHub -->
